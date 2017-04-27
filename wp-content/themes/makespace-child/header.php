@@ -55,6 +55,7 @@
 			?>
 		</header>
 		<div class="banner">
+			<div class="img"></div>
 			<div class="banner-overlay"></div>
 		</div>
 		<?php

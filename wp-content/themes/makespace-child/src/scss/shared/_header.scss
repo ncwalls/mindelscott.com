@@ -9,19 +9,60 @@
 	z-index: 99;
 }
 
+#nav-toggle{
+	background: none;
+	border-top: 1px solid $black;
+	border-bottom: 1px solid $black;
+	color: $black;
+	font-size: 1rem;
+	font-weight: 400;
+	letter-spacing: 0.07;
+	line-height: 1;
+	padding: 0.3rem 0;
+	position: absolute;
+	top: 1.7rem;
+	left: 1rem;
+	text-align: right;
+	text-transform: uppercase;
+	//width: 3rem;
+}
+
+.brand{
+	display: block;
+	margin:5rem 0 0 8.5%;
+	width: 19.2rem;
+	
+	img{
+		display: block;
+		height: auto;
+		width: 100%;
+	}
+}
+
 .banner{
-	background: url(images/sub-page-banner.jpg) no-repeat center center;
-	background-size: cover;
 	float: right;
-	height: 17rem;
+	//height: 17rem;
 	position: relative;
 	width: 70%;
 	
-	/*.img{
+	&:before{
+		content: '';
+		display: block;
 		height: 0;
 		padding-bottom: 17.73%;
 		width: 100%;
-	}*/
+	}
+	
+	.img{
+		background: url(images/sub-page-banner.jpg) no-repeat center center;
+		background-size: cover;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 1;
+	}
 }
 
 .banner-overlay{
@@ -32,4 +73,5 @@
 	right: 0;
 	bottom: 0;
 	left: 0;
+	z-index: 3;
 }
