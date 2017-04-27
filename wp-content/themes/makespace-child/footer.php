@@ -1,17 +1,48 @@
 		<footer class="site-footer">
-			<div class="container">
-				<div class="left">
-					<nav class="footer-inlinks">
-						<ul>
-							<li class="copyright">&copy;<?php echo date( 'Y' ); ?> <?php bloginfo( 'name' ); ?>.</li>
-							<li><a href="<?php echo home_url( 'privacy-policy' ); ?>" title="Privacy Policy">Privacy Policy</a></li>
-							<li><a href="<?php echo home_url( 'site-info' ); ?>" title="Site Info">Site Info</a></li>
-							<li><a href="<?php echo home_url( 'site-map' ); ?>" title="Site Map">Site Map</a></li>
-						</ul>
-					</nav>
+			<div class="footer-top">
+				<div class="footer-contact">
+					<div class="inner">
+						<a href="<?php echo home_url(); ?>" title="<?php bloginfo( 'name' ); ?>" class="footer-top-logo">
+							<img src="<?php the_field( 'site_logo', 'option' ); ?>" alt="<?php bloginfo( 'name' ); ?>">
+						</a>
+						<p class="phone">(502) 485-1508</p>
+						<p class="address">5151 Jefferson Blvd., Louisville, KY 40219</p>
+						<a href="" class="contact-link">Contact Us Today</a>
+					</div>
 				</div>
-				<div class="right">
-					<a href="https://www.makespaceweb.com" title="Louisville Web Design" target="_blank" id="makespace-bee" class="bee-flutter">
+				<div class="footer-map">
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<div class="container">
+					<div class="site-info">
+						<a href="" class="footer-bottom-logo">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo-green.png" alt="<?php bloginfo( 'name' ); ?>">
+						</a>
+						<p class="copyright">&copy;<?php echo date( 'Y' ); ?> <?php bloginfo( 'name' ); ?></p>
+						<nav class="footer-inlinks">
+							<ul>
+								<li><a href="<?php echo home_url( 'privacy-policy' ); ?>" title="Privacy Policy">Privacy Policy</a></li>
+								<li><a href="<?php echo home_url( 'site-info' ); ?>" title="Site Info">Site Info</a></li>
+								<li><a href="<?php echo home_url( 'site-map' ); ?>" title="Site Map">Site Map</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="quote">
+						<p>“Etiam lobortis velit phasellus suscipit urnalate classen aptent tacitin sociosqu 
+ torquent selim trebor lehcar mailliw.”</p>
+						<p class="author"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/signature.png" alt="David A. Mindel"/></p>
+					</div>
+					<div class="social">
+						<p>Stay Connected</p>
+						<ul>
+							<li><a href="" class="fa fa-facebook"></a></li>
+							<li><a href="" class="fa fa-twitter"></a></li>
+							<li><a href="" class="fa fa-linkedin"></a></li>
+							<li><a href="" class="fa fa-google-plus"></a></li>
+						</ul>
+					</div>
+					<a href="https://www.makespaceweb.com" title="Louisville Web Design" target="_blank" id="makespace-bee" class="bee-color bee-flutter">
 						<span class="makespace-bee-group">
 							<span class="makespace-bee-body">
 								<svg xmlns="http://www.w3.org/2000/svg" width="42.9" height="81.1" viewBox="0 0 42.9 81.1" preserveAspectRatio="xMinYMin meet">
