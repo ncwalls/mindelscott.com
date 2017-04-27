@@ -31,35 +31,32 @@
 			</div>
 		<?php endif; ?>
 		<header class="site-header">
-			<div class="inner container">
-				<div class="left">
-					<a href="<?php echo home_url(); ?>" title="<?php bloginfo( 'name' ); ?>" class="brand">
-						<img src="<?php the_field( 'site_logo', 'option' ); ?>" alt="<?php bloginfo( 'name' ); ?>">
-					</a>
-				</div>
-				<div class="right">
-					<?php
-						wp_nav_menu( array(
-							'container' => 'nav',
-							'container_id' => 'large-nav-primary',
-							'theme_location' => 'primary'
-						) );
-					?>
-					<button class="nav-toggle" type="button" id="nav-toggle">
-						<span>menu</span>
-					</button>
-				</div>
-			</div>
+			<button class="nav-toggle" type="button" id="nav-toggle">
+				<span>menu</span>
+			</button>
+			<a href="<?php echo home_url(); ?>" title="<?php bloginfo( 'name' ); ?>" class="brand">
+				<img src="<?php the_field( 'site_logo', 'option' ); ?>" alt="<?php bloginfo( 'name' ); ?>">
+			</a>
 			<?php
-				if( 'dropdown' == get_field( 'menu_type', 'option' ) ){
+				/*wp_nav_menu( array(
+					'container' => 'nav',
+					'container_id' => 'large-nav-primary',
+					'theme_location' => 'primary'
+				) );*/
+			?>
+			<?php
+				/*if( 'dropdown' == get_field( 'menu_type', 'option' ) ){
 					wp_nav_menu( array(
 						'container' => 'nav',
 						'container_id' => 'dropdown-nav-primary',
 						'theme_location' => 'primary'
 					) );
-				}
+				}*/
 			?>
 		</header>
+		<div class="banner">
+			<div class="banner-overlay"></div>
+		</div>
 		<?php
 			if( function_exists( 'yoast_breadcrumb' ) ){
 				yoast_breadcrumb( '<div id="breadcrumbs">', '</div>' );

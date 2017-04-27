@@ -1,0 +1,58 @@
+body{
+	font-size: 1.6rem;
+	line-height: 1.375;
+}
+
+h1{
+	font-size: 2.3rem;
+	line-height: 1;
+	margin: 0 0 2.5rem 0;
+	text-align: center;
+	
+	&:before{
+		background: url(images/triangle.png) no-repeat center center;
+		background-size: auto 100%;
+		content: "";
+		display: block;
+		height: 2.1rem;
+		margin-bottom: 0.5rem;
+		width: 100%;
+	}
+}
+
+h2{
+	font-size: 2rem;
+	line-height: 1;
+	margin: 1.5em 0 0.2em 0;
+}
+
+h3{
+	font-size: 1.7rem;
+	line-height: 1;
+	margin: 1.5em 0 0.2em 0;
+}
+
+p{
+	margin: 0 0 1.7rem 0;
+}
+
+a{
+	color: $green;
+	font-weight: 400;
+	text-decoration: none;
+	//transition: color 0.3s;
+	
+	&:hover{
+		text-decoration: underline;
+	}
+}
+
+.container{
+	
+}
+
+.inner-container{
+	@include grid-column(14 of 24);
+	@include grid-shift(5);
+	padding-top: 4.5rem;
+}
