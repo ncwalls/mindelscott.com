@@ -2,12 +2,18 @@
 	background: $black;
 	margin-top: 7rem;
 	padding: 2.2rem 0;
+	position: relative;
+	z-index: 100;
 }
 
 .footer-top{
 	background: $gray-lt;
 	height: 44.2rem;
 	overflow: hidden;
+	
+	@media(max-width:$tablet){
+		height: auto;
+	}
 }
 
 .footer-contact{
@@ -17,18 +23,37 @@
 	text-align: center;
 	width: 42%;
 	
+	@media(max-width:$tablet){
+		border-bottom: 2.2rem solid $black;
+		height: auto;
+		width: 100%;
+	}
+	
 	.inner{
 		position: absolute;
 		top: 50%;
 		right: 0;
 		transform: translateY(-50%);
 		width: 70%;
+	
+		@media(max-width:$tablet){
+			padding: 5rem 0;
+			margin: 0 auto;
+			position: relative;
+			top: 0;
+			transform: translateY(0);
+			width: 80%;
+		}
 	}
 	
 	.footer-top-logo{
 		display: inline-block;
 		margin-bottom: 3rem;
 		width: 19.2rem;
+			
+		@media(max-width:$tablet){
+			width: 16rem;
+		}
 	
 		img{
 			display: block;
@@ -84,6 +109,11 @@
 	position: relative;
 	width: 58%;
 	
+	@media(max-width:$tablet){
+		height: 30rem;
+		width: 100%;
+	}
+
 	/*&:before{
 		background: rgba($green,0.5);
 		content: "";
@@ -107,6 +137,10 @@
 		left: 0;
 		bottom: 0;
 		z-index: 5;
+	
+		@media(max-width:$tablet){
+			display: none;
+		}
 	}
 }
 
@@ -117,11 +151,24 @@
 	.container{
 		align-items: center;
 		display: flex;
+		
+		@media(max-width:$laptop){
+			display: block;
+			position: relative;
+		}
 	}
 	
 	.site-info{
 		float: left;
 		font-size: 1.2rem;
+		
+		@media(max-width:$laptop){
+			margin-bottom: 3rem;
+			width: 100%;
+		}
+		@media(max-width:$phablet){
+			text-align: center;
+		}
 		
 		p{
 			margin: 0;
@@ -144,6 +191,10 @@
 		margin-bottom: 1.5rem;
 		width: 11.25rem;
 		
+		@media(max-width:$phablet){
+			display: inline-block;
+		}
+		
 		img{
 			display: block;
 			height: auto;
@@ -158,6 +209,16 @@
 		line-height: 1.3;
 		padding: 0 8rem;
 		
+		@media(max-width:$laptop){
+			padding: 0;
+			width: 50%;
+		}
+		@media(max-width:$phablet){
+			margin-bottom: 4rem;
+			text-align: center;
+			width: 100%;
+		}
+		
 		p{
 			margin: 0;
 		}
@@ -166,6 +227,10 @@
 			line-height: 1;
 			padding-right: 3rem;
 			text-align: right;
+	
+			@media(max-width:$phablet){
+				text-align: center;
+			}
 			
 			img{
 				display: inline-block;
@@ -179,6 +244,15 @@
 		float: left;
 		padding-right: 6rem;
 		text-align: center;
+		
+		@media(max-width:$laptop){
+			padding-right: 0;
+			width: 45%;
+		}
+		@media(max-width:$phablet){
+			margin-bottom: 3rem;
+			width: 100%;
+		}
 
 		p{
 			font-family: $font-family-headline;
@@ -187,6 +261,7 @@
 			margin: 0 0 1rem 0;
 			white-space: nowrap;
 		}
+		
 		ul{
 			font-size: 2.5rem;
 			list-style: none;
@@ -198,6 +273,13 @@
 		li{
 			display: inline-block;
 			margin: 0 1rem;
+		
+			@media(max-width:$tablet){
+				margin: 0 2rem 0 0;
+			}
+			@media(max-width:$phablet){
+				margin: 0 1rem;
+			}
 		}
 		
 		a{
@@ -209,13 +291,37 @@
 		}
 	}
 	
-	#makespace-bee{
+	.makespace{
 		float: right;
+		
+		@media(max-width:$laptop){
+			width: 5%;
+		}
+		@media(max-width:$phablet){
+			width: 100%;
+		}
+	}
+	
+	#makespace-bee{
+		display: block;
+		width: 2.3rem;
+		
+		@media(max-width:$laptop){
+			float: right;
+		}
+		@media(max-width:$phablet){
+			float: none;
+			margin: 0 auto;
+		}
 
 		.makespace-bee-body-outline,
 		.wing-outline{
 			fill:$green;
 			transition: fill 0.3s;
+		}
+		
+		.wing-fill{
+			fill: rgba(#fff, 0.2);
 		}
 
 		&:hover{
