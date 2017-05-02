@@ -1,18 +1,21 @@
 		<footer class="site-footer">
-			<div class="footer-top">
-				<div class="footer-contact">
-					<div class="inner">
-						<a href="<?php echo home_url(); ?>" title="<?php bloginfo( 'name' ); ?>" class="footer-top-logo">
-							<img src="<?php the_field( 'site_logo', 'option' ); ?>" alt="<?php bloginfo( 'name' ); ?>">
-						</a>
-						<p class="phone">(502) 485-1508</p>
-						<p class="address">5151 Jefferson Blvd., Louisville, KY 40219</p>
-						<a href="" class="contact-link">Contact Us Today</a>
+			<?php $contact_info = get_field('contact_information', 'option')[0]; ?>
+			<?php if(!is_page_template('page_contact.php')): ?>
+				<div class="footer-top">
+					<div class="footer-contact">
+						<div class="inner">
+							<a href="<?php echo home_url(); ?>" title="<?php bloginfo( 'name' ); ?>" class="footer-top-logo">
+								<img src="<?php the_field( 'site_logo', 'option' ); ?>" alt="<?php bloginfo( 'name' ); ?>">
+							</a>
+							<p class="phone"><?php echo $contact_info['phone_number']; ?></p>
+							<p class="address"><?php echo $contact_info['address']; ?></p>
+							<a href="<?php echo home_url('contact'); ?>" class="contact-link">Contact Us Today</a>
+						</div>
+					</div>
+					<div class="footer-map">
 					</div>
 				</div>
-				<div class="footer-map">
-				</div>
-			</div>
+			<?php endif; ?>
 			<div class="footer-bottom">
 				<div class="container">
 					<div class="site-info">
@@ -36,10 +39,12 @@
 					<div class="social">
 						<p>Stay Connected</p>
 						<ul>
-							<li><a href="" class="fa fa-facebook"></a></li>
-							<li><a href="" class="fa fa-twitter"></a></li>
-							<li><a href="" class="fa fa-linkedin"></a></li>
-							<li><a href="" class="fa fa-google-plus"></a></li>
+							<?php
+								$social_links = $contact_info['social_media_links'];
+								foreach($social_links as $social):
+							?>
+								<li><a href="<?php echo $social['url']; ?>" class="fa <?php echo $social['class']; ?>"></a></li>
+							<?php endforeach; ?>
 						</ul>
 					</div>
 					<div class="makespace">

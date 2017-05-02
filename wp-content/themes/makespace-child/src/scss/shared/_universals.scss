@@ -60,6 +60,21 @@ article{
 	
 }
 
+.wide-container{
+	@include grid-column(20 of 24);
+	@include grid-shift(2);
+	
+	@media(max-width:$tablet){
+		@include grid-column(22 of 24);
+		@include grid-shift(1);
+	}
+	
+	@media(max-width:$phablet){
+		@include grid-column(24 of 24);
+		@include grid-shift(0);
+	}
+}
+
 .inner-container{
 	@include grid-column(14 of 24);
 	@include grid-shift(5);
@@ -67,7 +82,7 @@ article{
 	
 	@media(max-width:$laptop){
 		@include grid-column(16 of 24);
-		@include grid-shift(3);
+		@include grid-shift(4);
 	}
 	
 	@media(max-width:$tablet){
@@ -78,5 +93,32 @@ article{
 	@media(max-width:$phablet){
 		@include grid-column(22 of 24);
 		@include grid-shift(1);
+	}
+}
+
+.button{
+	background: none;
+	color: $black;
+	display: inline-block;
+	font-size: 1.4rem;
+	font-weight: 700;
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+	transition: color 0.3s;
+
+	&:hover{
+		color: $green;
+		text-decoration: none;
+	}
+
+	&:before{
+		background: url(images/triangle.png) no-repeat center center;
+		background-size: auto 100%;
+		content: "";
+		display: block;
+		height: 2.1rem;
+		margin-bottom: 0.5rem;
+		width: 100%;
 	}
 }

@@ -1,11 +1,25 @@
 (function($){
-
-	var docReady = function(){
-		console.log( 'Doc ready!' );
-	};
+	
+	var jobsPage = function(){
+		
+		var jobFilterLink = $('[data-action="job-filter"]');
+		
+		jobFilterLink.on('click', function(e){
+			e.preventDefault();
+			var target = $(this).attr('data-target');
+		});
+		
+		var jobToggle = $('[data-action="job-toggle"]');
+		
+		jobToggle.on('click', function(){
+			var job = $(this).parents('.inner');
+			job.toggleClass('expand');
+		});
+		
+	}
 
 	$(document).ready(function(){
-		docReady();
+		jobsPage();
 	});
 
 })(jQuery);

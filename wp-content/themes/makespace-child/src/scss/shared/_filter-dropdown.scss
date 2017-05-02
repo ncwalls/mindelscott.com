@@ -1,5 +1,10 @@
 
 .filter-container{
+	background: #e9eaea;
+	font-family: $font-family-alt;
+	font-weight: normal;
+	height: 6rem;
+	width: 100%;
 	
 	.filter-label{
 	}
@@ -8,24 +13,29 @@
 		position:relative;
 		
 		.filter-display{
+			
 			border:0 none;
 			cursor:pointer;
+			font-size: 2.7rem;
 			height: 100%;
-			padding: 0 3rem 0 1rem;
+			line-height: 6rem;
+			padding: 0 7rem 0 1.5rem;
 			position:relative;
+			text-transform: uppercase;
 			white-space: nowrap;
 			width:100%;
 			
 			&:before{
+				color: $green;
 				content:"\f107";
 				display:block;
 				font-family:FontAwesome;
-				font-size:1rem;
+				font-size: 3.6rem;
 				height: 100%;
 				margin:auto;
 				position: absolute;
 				top: 0;
-				right: 1rem;
+				right: 2.3rem;
 				bottom: 0;
 				text-align: left;
 				transform:rotate(0deg);
@@ -33,6 +43,7 @@
 		}
 		
 		ul{
+			background: #e9eaea;
 			display:none;
 			list-style:none;
 			margin:0;
@@ -51,6 +62,7 @@
 			
 			a{
 				display:block;
+				color: $black;
 				padding:0.5rem 1rem;
 				text-decoration: none;
 				transition:all 0.3s;

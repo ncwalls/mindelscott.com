@@ -1,3 +1,241 @@
 .page-template-page_contact {
+	article.inner-container{
+		padding-bottom: 3rem;
+	}
+	.site-footer{
+		//margin-top: 0;
+	}
+}
+
+
+.contact-middle{
+	background: $gray-lt;
+	border-top: 2.2rem solid $black;
+	border-bottom: 2.2rem solid $black;
+	//height: 44.2rem;
+	overflow: hidden;
+	position: relative;
 	
+	@media(max-width:$tablet){
+		//height: auto;
+	}
+
+	.contact-info{
+		float: left;
+		height: 100%;
+		position: relative;
+		width: 100%;
+		z-index: 1;
+
+		@media(max-width:$tablet){
+			border-bottom: 2.2rem solid $black;
+			height: auto;
+			width: 100%;
+		}
+		
+		.row{
+			background: #f3f3f3;
+			padding: 4rem 11.7%;
+		
+			@media(max-width:$laptop){
+				padding-right: 6%;
+				padding-left: 6%;
+			}
+			
+			&:nth-child(2n){
+				background: #fcfcfc;
+			}
+		
+			& > .fa{
+				color: $gray;
+				display: block;
+				float: left;
+				margin-right: 2rem;
+				text-align: center;
+				width: 2.7rem;
+			}
+		}
+		
+		p{
+			line-height: 1;
+			margin: 0;
+		}
+
+		.phone,
+		.fax{
+			font-family: $font-family-headline;
+			font-size: 2.3rem;
+		}
+		
+		.phone{
+			.fa{
+				font-size: 3rem;
+			}
+		}
+		
+		.fax{
+			.fa{
+				font-size: 2.2rem;
+			}
+		}
+
+		.address{
+			line-height: 1.5;
+			
+			.fa{
+				font-size: 2.5rem;
+			}
+		}
+		
+		.social{
+			.fa-share-alt{
+				font-size: 2.3rem;
+			}
+			
+			ul{
+				font-size: 2.5rem;
+				line-height: 1;
+				list-style: none;
+				margin: 0;
+				overflow: hidden;
+				padding: 0;
+			}
+			li{
+				float: left;
+				margin-right: 3.8rem;
+			}
+			a{
+				&:hover{
+					color: $black;
+					text-decoration: none;
+				}
+			}
+		}
+
+	}
+
+	.contact-map{
+		background: $green;
+		border-left: 2.2rem solid $black;
+		overflow: hidden;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		transform: skewX(-30deg);
+		transform-origin: 0 100%;
+		width: 57%;
+		z-index: 2;
+
+		@media(max-width:$tablet){
+			border-left: 0;
+			position: relative;
+			transform: none;
+			width: 100%;
+		}
+
+		&:before{
+			/*background: rgba($green,0.5);
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			z-index: 2;*/
+		}
+
+		&:after{
+			/*background: url(images/footer-angle.png) no-repeat 0 0;
+			background-size: auto 100%;
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			z-index: 5;
+
+			@media(max-width:$tablet){
+				display: none;
+			}*/
+		}
+		
+		#gmap{
+			height: 100%;
+			width: 100%;
+			transform: skewX(30deg);
+			transform-origin: 0 100%;
+
+			@media(max-width:$tablet){
+				height: 30rem;
+				transform: none;
+			}
+		}
+	}
+}
+
+.gform_wrapper{
+	margin-top: 3rem;
+	
+	label{
+		font-family: $font-family-alt;
+		font-size: 1.6rem;
+		font-weight: normal;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+	}
+	input{
+		background: #e9eaea;
+		padding: 1.7rem;
+	}
+	textarea{
+		background: #e9eaea;
+		height: 21rem;
+		padding: 1.7rem;
+	}
+	
+	.required-msg{
+		font-family: $font-family-alt;
+		font-size: 1.4rem;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+	}
+	
+	#field_1_6{
+		margin-bottom: 0;
+	}
+	
+	button,
+	input[type="button"],
+	input[type="submit"],
+	.button{
+		background: none;
+		color: $black;
+		display: block;
+		float: right;
+		font-size: 1.4rem;
+		font-weight: 700;
+		margin: 0;
+		padding: 0;
+		text-transform: uppercase;
+		transition: color 0.3s;
+		
+		&:hover{
+			color: $green;
+			text-decoration: none;
+		}
+	
+		&:before{
+			background: url(images/triangle.png) no-repeat center center;
+			background-size: auto 100%;
+			content: "";
+			display: block;
+			height: 2.1rem;
+			margin-bottom: 0.5rem;
+			width: 100%;
+		}
+	}
 }
