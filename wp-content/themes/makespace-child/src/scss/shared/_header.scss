@@ -39,7 +39,6 @@
 
 .brand{
 	display: block;
-	//margin:5rem 0 0 11%;
 	position: fixed;
 	left: 11%;
 	right: 0;
@@ -49,56 +48,56 @@
 	width: 19.2rem;
 		
 	@media(max-width:$desktop){
-		//margin-left: 10%;
 		left: 10%;
 	}
 	@media(max-width:$laptop){
-		//margin-left: 9%;
 		left: 9%;
 	}
 	@media(max-width:$tablet){
-		//margin: 2rem 0 0 14%;
 		top: 2rem;
 		left: 14%;
 		width: 16rem;
 	}
 	@media(max-width:$phablet){
-		//margin-left: 22%;
 		position: absolute;
 		left: 22%;
 		width: 10rem;
 	}
 	
 	.scrolled &{
-		//margin-left: 7%;
-		left: 7%;
-		width: 16rem;
+		top: 2rem;
+		left: 90%;
+		width: 11rem;
 	
-		@media(max-width:$desktop){
-			//margin-left: 6.5%;
-			left: 6.5%;
+		@media(max-width:$fullsize){
+			left: 89%;
+			width: 9.5%;
 		}
 		@media(max-width:$laptop){
-			//margin:13rem 0 0 2%;
-			top: 13rem;
-			//left: 2%;
-			//width: 10rem;
+			left: 87%;
+			width: 13%;
+			/*top: 13rem;
 			left: 0;
 			width: 17%;
-		
+		*/
 			.logo-text{
 				opacity: 0;
 			}
 		}
 		@media(max-width:$tablet){
-			top: 15rem;
+			left: 90%;
+			width: 10%;
+			/*top: 15rem;
 			left: 0%;
-			width: 14%;
+			width: 14%;*/
 		}
 		@media(max-width:$phablet){
-			top: 2rem;
+			//opacity: 0;
 			left: 22%;
 			width: 10rem;
+			/*top: 2rem;
+			left: 22%;
+			width: 10rem;*/
 		
 			.logo-text{
 				opacity: 1;

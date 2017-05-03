@@ -35,13 +35,18 @@
 	
 	li{
 		background: #f7f7f7;
+		display: none;
 		margin-bottom: 0.5rem;
 		overflow: hidden;
 		
-		&:nth-child(2n){
+		//&:nth-child(2n),
+		&.bg{
 			background: #fcfcfc;
 		}
 		
+		&.vis{
+			display: block;
+		}
 	}
 	
 	.inner{
@@ -264,6 +269,70 @@
 				content: "\f068";
 				opacity: 0;
 			}
+		}
+	}
+}
+
+#application-form{
+	display: none;
+	width: 100%;
+}
+
+.mfp-inline-holder .mfp-content,
+.mfp-ajax-holder .mfp-content{
+	margin: 0 auto;
+	width: 60%;
+	
+	@media (max-width:$laptop){
+		width: 70%;
+	}
+	@media (max-width:$tablet){
+		width: 80%;
+	}
+	
+	#application-form{
+		@include clearfix;
+		display: block;
+		padding: 2rem 0;
+		
+		h2{
+			color: #fff;
+			font-size: 2.3rem;
+		}
+		
+		label{
+			color: #fff;
+		}
+		.gfield.address{
+			width: 100%;
+		}
+		.gfield.city,
+		.gfield.state,
+		.gfield.country{
+			width: 33%;
+		}
+		.gfield.city{
+		
+			@media (max-width:$tablet){
+				width: 100%;
+			}
+			
+		}
+		.gfield.state,
+		.gfield.country{
+			@media (max-width:$tablet){
+				width: 50%;
+			}
+			@media (max-width:$phablet){
+				width: 100%;
+			}
+		}
+		
+		button,
+		input[type="button"],
+		input[type="submit"],
+		.button{
+			color: #fff;
 		}
 	}
 }

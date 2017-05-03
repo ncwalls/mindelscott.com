@@ -1,6 +1,6 @@
 
 .filter-container{
-	background: #e9eaea;
+	background: $gray-lt;
 	font-family: $font-family-alt;
 	font-weight: normal;
 	height: 6rem;
@@ -43,7 +43,7 @@
 		}
 		
 		ul{
-			background: #e9eaea;
+			background: $gray-lt;
 			display:none;
 			list-style:none;
 			margin:0;

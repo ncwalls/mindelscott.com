@@ -180,6 +180,10 @@
 .gform_wrapper{
 	margin-top: 3rem;
 	
+	.gfield_visibility_hidden{
+		display: none;
+	}
+	
 	label{
 		font-family: $font-family-alt;
 		font-size: 1.6rem;
@@ -187,12 +191,23 @@
 		letter-spacing: 0.05em;
 		text-transform: uppercase;
 	}
-	input{
-		background: #e9eaea;
-		padding: 1.7rem;
+	input,
+	select{
+		background: $gray-lt;
+		height: 5.5rem;
+		line-height: 5.5rem;
+		padding: 0 1.7rem;
+		
+		&[type="file"]{
+			padding: 0;
+			width: 100%;
+		}
+	}
+	select{
+		
 	}
 	textarea{
-		background: #e9eaea;
+		background: $gray-lt;
 		height: 21rem;
 		padding: 1.7rem;
 	}
@@ -218,6 +233,8 @@
 		float: right;
 		font-size: 1.4rem;
 		font-weight: 700;
+		height: auto;
+		line-height: 1;
 		margin: 0;
 		padding: 0;
 		text-transform: uppercase;

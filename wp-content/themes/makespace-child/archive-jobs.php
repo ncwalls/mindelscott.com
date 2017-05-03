@@ -18,16 +18,11 @@
 					<ul>
 						<li><a href="<?php echo home_url('jobs'); ?>" data-action="job-filter" data-target="all">All Job Postings</a></li>
 						<?php
-							$categories = get_categories( array(
-								'orderby' => 'name',
-								'order'   => 'ASC'
+							$services = get_posts( array(
+								'post_type' => 'services'
 							) );
-
-							foreach( $categories as $category ) {
-								$caturl = get_category_link( $category->term_id );
-								$catname = $category->name;
-
-								echo '<li><a href="' . $caturl .'" data-action="job-filter" data-target="'.$category->slug.'">' . $catname. '</a></li>';
+							foreach( $services as $service ) {
+								echo '<li><a href="' . get_permalink($service->ID) .'" data-action="job-filter" data-target="' .  $service->post_name . '">' . get_the_title($service->ID) . '</a></li>';
 							} 
 						?>
 					</ul>
@@ -42,7 +37,7 @@
 			</div>
 			<ul class="jobs-list">
 				<?php while( have_posts() ): the_post(); ?>
-					<li>
+					<li class="vis <?php echo get_post_field( 'post_name', get_field('service_type')); ?>">
 						<div class="inner">
 							<div class="service">
 								<?php echo get_the_post_thumbnail(get_field('service_type'), 'large'); ?>
@@ -56,7 +51,7 @@
 								</div>
 								<div class="full-content">
 									<?php the_content(); ?>
-									<a href="" class="button">Apply For This Position</a>
+									<a href="#application-form" class="button" data-action="application-form" data-position="<?php the_title(); ?>">Apply For This Position</a>
 								</div>
 							</div>
 							<div class="toggle">
@@ -66,6 +61,10 @@
 					</li>
 				<?php endwhile; ?>
 			</ul>
+			<div id="application-form">
+				<h2><span id="application-job-title"></span></h2>
+				<?php echo do_shortcode( '[gravityform id="2" title="false" description="false"]' ); ?>
+			</div>
 		</div>
 	</div>
 
