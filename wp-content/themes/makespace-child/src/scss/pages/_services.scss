@@ -1,0 +1,106 @@
+.post-type-archive-services {
+	
+}
+
+.services-archive-list{
+	margin-top: 4rem;
+	width: 100%;
+	
+	.inner{
+		@include grid-column(16 of 24);
+		@include grid-shift(4);
+		
+		@media(max-width:$laptop){
+			@include grid-column(20 of 24);
+			@include grid-shift(2);
+		}
+		@media(max-width:$phablet){
+			@include grid-column(24 of 24);
+			@include grid-shift(0);
+		}
+	}
+	
+	article{
+		background: #fcfcfc;
+		padding: 5.5rem 0 4rem 0;
+			
+		h2,
+		.more{
+			@media(max-width:$phablet){
+				text-align: center !important;
+			}
+		}
+			
+		
+		.icon{
+			@include grid-column(3 of 16);
+			
+			@media(max-width:$laptop){
+				@include grid-column(4 of 16);
+			}
+			@media(max-width:$phablet){
+				float: none !important;
+				margin: 0 auto 2rem auto !important;
+			}
+		}
+
+		.content{
+			@include grid-column(12 of 16);
+			float: right;
+			
+			@media(max-width:$phablet){
+				@include grid-column(24 of 24);
+			}
+		}
+		
+		&:nth-child(2n){
+			background: none;
+			
+			h2,
+			.more{
+				text-align: right;
+			}
+			
+			.icon{
+				float: right;
+			}
+
+			.content{
+				float: left;
+			}
+			
+		}
+	}
+	
+	h2{
+		font-size: 2.3rem;
+		margin: 0 0 2rem 0;
+		
+		a{
+			color: $black;
+		
+			&:hover{
+				text-decoration: none;
+			}
+			
+		}
+	}
+}
+
+
+.single-services{
+	.service-icon{
+		float: left;
+		margin: 0 4rem 2rem 0;
+		width: 20%;
+		
+		@media(max-width:$phablet){
+			width: 25%;
+			margin-right: 3rem;
+		}
+	}
+	
+	.back{
+		text-align: right;
+	}
+}
