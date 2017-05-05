@@ -7,6 +7,7 @@ class MakespaceChild {
 		add_filter( 'excerpt_length', array( $this, 'custom_excerpt_length' ), 999 );
 		add_filter( 'excerpt_more', array( $this, 'new_excerpt_more' ) );
 		add_action( 'pre_get_posts', array( $this, 'archive_sort_order' ) ); 
+		//add_action( 'pre_get_posts', array( $this, 'archive_posts_per_page' ) ); 
 	}
 
 	function wp_enqueue_scripts(){
@@ -47,6 +48,12 @@ class MakespaceChild {
 			$query->set( 'orderby', 'menu_order' );
 		endif;    
 	}
+	
+	/*function archive_posts_per_page($query){
+		if( is_post_type_archive( 'staff' )):
+			$query->set( 'posts_per_page', 1 );
+		endif;    
+	}*/
 
 }
 

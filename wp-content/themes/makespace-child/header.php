@@ -11,25 +11,6 @@
 		<![endif]-->
 	</head>
 	<body <?php body_class(); ?>>
-		<?php /*if( 'ocn' == get_field( 'menu_type', 'option' ) ): ?>
-			<div id="ocn">
-				<div id="ocn-inner">
-					<div id="ocn-top">
-						<a href="<?php echo home_url(); ?>" title="<?php bloginfo( 'name' ); ?>" id="ocn-brand">
-							<img src="<?php the_field( 'site_logo', 'option' ); ?>" alt="<?php bloginfo( 'name' ); ?>">
-						</a>
-						<button class="nav-toggle" type="button" id="ocn-close">
-							<span></span>
-						</button>
-					</div>
-					<?php wp_nav_menu( array(
-						'container' => 'nav',
-						'container_id' => 'ocn-nav-primary',
-						'theme_location' => 'primary'
-					) ); ?>
-				</div>
-			</div>
-		<?php endif;*/ ?>
 		<a href="<?php echo home_url(); ?>" title="<?php bloginfo( 'name' ); ?>" class="brand">
 			<img src="<?php the_field( 'site_logo', 'option' ); ?>" alt="<?php bloginfo( 'name' ); ?>">
 			
@@ -82,22 +63,6 @@
 			<button class="nav-toggle" type="button" id="nav-toggle">
 				<span>menu</span>
 			</button>
-			<?php
-				/*wp_nav_menu( array(
-					'container' => 'nav',
-					'container_id' => 'large-nav-primary',
-					'theme_location' => 'primary'
-				) );*/
-			?>
-			<?php
-				/*if( 'dropdown' == get_field( 'menu_type', 'option' ) ){
-					wp_nav_menu( array(
-						'container' => 'nav',
-						'container_id' => 'dropdown-nav-primary',
-						'theme_location' => 'primary'
-					) );
-				}*/
-			?>
 		</header>
 		<div class="main-nav">
 			<div class="nav-close nav-toggle"></div>
@@ -112,17 +77,18 @@
 						'theme_location' => 'primary'
 					) );
 				?>
+				<?php $contact_info = get_field('contact_information', 'option')[0]; ?>
 				<div class="nav-contact">
-					<p class="phone">PH <strong>(502) 485-1508</strong></p>
-					<p class="fax">FX <strong>(502) 485-1508</strong></p>
-					<p class="address">5151 Jefferson Blvd.<br>
-						Louisville, KY<br>
-						40219</p>
+					<p class="phone">PH <strong><?php echo $contact_info['phone_number']; ?></strong></p>
+					<p class="fax">FX <strong><?php echo $contact_info['fax_number']; ?></strong></p>
+					<p class="address"><?php echo $contact_info['address']; ?></p>
 					<ul class="social">
-						<li><a href="" class="fa fa-facebook"></a></li>
-						<li><a href="" class="fa fa-twitter"></a></li>
-						<li><a href="" class="fa fa-linkedin"></a></li>
-						<li><a href="" class="fa fa-google-plus"></a></li>
+						<?php
+							$social_links = $contact_info['social_media_links'];
+							foreach($social_links as $social):
+						?>
+							<li><a href="<?php echo $social['url']; ?>" class="fa <?php echo $social['class']; ?>"></a></li>
+						<?php endforeach; ?>
 					</ul>
 				</div>
 			</div>

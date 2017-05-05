@@ -13,6 +13,7 @@
 						</div>
 					</div>
 					<div class="footer-map">
+						<div id="gmap"></div>
 					</div>
 				</div>
 			<?php endif; ?>

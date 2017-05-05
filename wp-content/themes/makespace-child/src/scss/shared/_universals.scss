@@ -122,3 +122,69 @@ article{
 		width: 100%;
 	}
 }
+
+.address-details{
+.address-piece-0{
+	display: block;
+	}
+	.address-piece-1{
+		&:after{
+			content: ",";
+		}
+	}
+	.address-piece-2{
+	}
+	.address-piece-link{
+		display: block;
+	}
+}
+
+.archive-pagination{
+	clear: both;
+	float: left;
+	margin: 4rem 0 7.5rem 0;
+	text-align: center;
+	width: 100%;
+	
+	ul.page-numbers{
+		background: $gray-lt;
+		border-radius: 1.5rem;
+		display: inline-block;
+		font-size: 1.9rem;
+		font-weight: 500;
+		height: 3rem;
+		line-height: 3rem;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		
+		li{
+			display: block;
+			float: left;
+		}
+		
+		.page-numbers{
+			color: $green;
+			display: block;
+			height: 3rem;
+			margin: 0 0.3rem;
+			text-align: center;
+			width: 3rem;
+			
+			&.prev{
+				margin-left: 0;
+				width: 4rem;
+			}
+			&.next{
+				margin-right: 0;
+				width: 4rem;
+			}
+			
+			&:hover,
+			&.current{
+				color: $black;
+				text-decoration: none;
+			}
+		}
+	}
+}
