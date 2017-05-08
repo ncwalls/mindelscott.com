@@ -39,11 +39,11 @@
 						<ul>
 							<?php
 								$projects = get_field('staff_projects'); 
-								foreach($projects as $project):
+								foreach($projects as $project_id):
 							?>
 								<li>
-									<a href="<?php echo get_permalink($project->ID); ?>">
-										<div class="img" style="background-image: url(<?php echo get_the_post_thumbnail_url($project->ID, 'small'); ?>)"></div>
+									<a href="<?php echo get_permalink($project_id); ?>">
+										<div class="img" style="background-image: url(<?php echo get_the_post_thumbnail_url($project_id, 'small'); ?>)"></div>
 									</a>
 								</li>
 							<?php endforeach; ?>

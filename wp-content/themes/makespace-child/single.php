@@ -13,12 +13,12 @@
 					<ul>
 						<li class="item prev">
 							<?php if( get_previous_post() ): $prev = get_previous_post(); ?>
-								<a href="<?php echo get_permalink( $prev->ID ); ?>"><?php echo $prev->post_title; ?></a>
+								<a href="<?php echo get_permalink( $prev->ID ); ?>"><span class="fa fa-angle-left"></span> Previous <span class="extra-words">Article</span></a>
 							<?php endif; ?>
 						</li>
 						<li class="item next">
 							<?php if( get_next_post() ): $next = get_next_post(); ?>
-							<a href="<?php echo get_permalink( $next->ID ); ?>"><?php echo $next->post_title; ?></a>
+							<a href="<?php echo get_permalink( $next->ID ); ?>">Next <span class="extra-words">Article</span> <span class="fa fa-angle-right"></span></a>
 							<?php endif; ?>
 						</li>
 						<li class="all">

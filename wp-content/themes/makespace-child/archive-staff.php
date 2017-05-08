@@ -11,7 +11,7 @@
 				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 					<figure>
 						<?php if(get_post_thumbnail_id($post->ID)):	?>
-							<div class="img" style="background-image: url(<?php the_post_thumbnail_url( 'large' ); ?>)"></div>
+							<div class="img" style="background-image: url(<?php the_post_thumbnail_url( 'medium' ); ?>)"></div>
 						<?php endif; ?>
 					</figure>
 					<div class="content">

@@ -7,7 +7,7 @@ class MakespaceChild {
 		add_filter( 'excerpt_length', array( $this, 'custom_excerpt_length' ), 999 );
 		add_filter( 'excerpt_more', array( $this, 'new_excerpt_more' ) );
 		add_action( 'pre_get_posts', array( $this, 'archive_sort_order' ) ); 
-		//add_action( 'pre_get_posts', array( $this, 'archive_posts_per_page' ) ); 
+		add_action( 'pre_get_posts', array( $this, 'archive_posts_per_page' ) ); 
 	}
 
 	function wp_enqueue_scripts(){
@@ -33,6 +33,9 @@ class MakespaceChild {
 		if ($post->post_type == 'jobs'){
 			return 12;
 		}
+		elseif ($post->post_type == 'projects'){
+			return 10;
+		}
 		else{
 			return 50;
 		}
@@ -49,11 +52,11 @@ class MakespaceChild {
 		endif;    
 	}
 	
-	/*function archive_posts_per_page($query){
-		if( is_post_type_archive( 'staff' )):
-			$query->set( 'posts_per_page', 1 );
+	function archive_posts_per_page($query){
+		if( is_post_type_archive( 'projects' )):
+			$query->set( 'posts_per_page', 9 );
 		endif;    
-	}*/
+	}
 
 }
 
