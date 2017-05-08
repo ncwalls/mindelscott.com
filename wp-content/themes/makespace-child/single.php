@@ -9,7 +9,7 @@
 					<li><?php echo MakespaceFramework::read_time(); ?></li>
 				</ul>
 				<?php the_content(); ?>
-				<footer>
+				<footer class="single-nav">
 					<ul>
 						<li class="item prev">
 							<?php if( get_previous_post() ): $prev = get_previous_post(); ?>
@@ -20,6 +20,11 @@
 							<?php if( get_next_post() ): $next = get_next_post(); ?>
 							<a href="<?php echo get_permalink( $next->ID ); ?>"><?php echo $next->post_title; ?></a>
 							<?php endif; ?>
+						</li>
+						<li class="all">
+							<a href="<?php echo home_url('blog'); ?>">
+								All Articles
+							</a>
 						</li>
 					</ul>
 				</footer>
