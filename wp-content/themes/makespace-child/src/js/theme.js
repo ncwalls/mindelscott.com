@@ -1,5 +1,22 @@
 (function($){
 	
+	var homePage = function(){
+		var aboutLinkButton = $('.about-links').find('.button');
+		var aboutHoverImages = $('.about-image').find('.img');
+
+		aboutLinkButton.hover(
+			function(){
+				var i = $(this).parents('li').index();
+				aboutHoverImages.removeClass('vis');
+				aboutHoverImages.eq(i).addClass('vis');
+			},
+			function(){
+				var i = $(this).parents('li').index();
+				aboutHoverImages.eq(i).removeClass('vis');
+			}
+		);
+	}
+	
 	var jobsPage = function(){
 		
 		var jobList = $('.jobs-list');
@@ -81,6 +98,7 @@
 	}
 
 	$(document).ready(function(){
+		homePage();
 		jobsPage();
 		projects();
 	});

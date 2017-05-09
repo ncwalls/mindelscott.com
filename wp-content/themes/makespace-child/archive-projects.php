@@ -61,7 +61,7 @@
 											$fill = 'url(#img-' . get_the_ID() . ')'; ?>
 											<defs>
 												<pattern id="img-<?php the_ID(); ?>" patternUnits="userSpaceOnUse" width="175" height="114">
-													<image xlink:href="<?php the_post_thumbnail_url( 'medium' ); ?>" x="0" y="0" width="175" height="114" />
+													<image xlink:href="<?php the_post_thumbnail_url( 'medium' ); ?>" x="0" y="0" width="100%" height="100%" preserveAspectRatio="xMinYMin slice" />
 												</pattern>
 											</defs>
 									<?php endif; ?>
@@ -100,14 +100,16 @@
 		</div>
 	</div>
 	<div class="wide-container">
-		<div class="archive-pagination">
-			<?php
-				echo paginate_links( array(
-					'prev_text' => '<i class="fa fa-angle-left"></i>',
-					'next_text' => '<i class="fa fa-angle-right"></i>',
-					'type' => 'list'
-				) );
-			?>
+		<div class="container">
+			<div class="archive-pagination">
+				<?php
+					echo paginate_links( array(
+						'prev_text' => '<i class="fa fa-angle-left"></i>',
+						'next_text' => '<i class="fa fa-angle-right"></i>',
+						'type' => 'list'
+					) );
+				?>
+			</div>
 		</div>
 	</div>
 

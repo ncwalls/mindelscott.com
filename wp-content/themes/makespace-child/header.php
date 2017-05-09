@@ -93,12 +93,14 @@
 				</div>
 			</div>
 		</div>
-		<div class="banner">
-			<div class="img"></div>
-			<div class="banner-overlay"></div>
-		</div>
-		<?php
-			if( function_exists( 'yoast_breadcrumb' ) ){
-				yoast_breadcrumb( '<div id="breadcrumbs">', '</div>' );
-			}
-		?>
+		<?php if(!is_front_page()): ?>
+			<div class="banner">
+				<div class="img"></div>
+				<div class="banner-overlay"></div>
+			</div>
+			<?php
+				if( function_exists( 'yoast_breadcrumb' ) ){
+					yoast_breadcrumb( '<div id="breadcrumbs">', '</div>' );
+				}
+			?>
+		<?php endif; ?>
