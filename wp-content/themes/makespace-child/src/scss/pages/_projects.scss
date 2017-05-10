@@ -28,6 +28,11 @@
 		margin: 0;
 		overflow: hidden;
 		padding: 0;
+		
+		@media(max-width:$phablet){
+			margin: 0 auto;
+			width: 90%;
+		}
 	}
 	li{
 		float: left;
@@ -59,6 +64,11 @@
 			&:nth-child(2n+1){
 				clear: left;
 			}
+		}
+		@media(max-width:480px){
+			clear: both;
+			margin-right: 0 !important;
+			width: 100%;
 		}
 	}
 	

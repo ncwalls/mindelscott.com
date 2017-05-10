@@ -105,13 +105,18 @@
 
 .footer-map{
 	background: $green;
+	border-left: 2.2rem solid $black;
 	float: left;
 	height: 100%;
+	overflow: hidden;
 	position: relative;
+	transform: skewX(-30deg);
+	transform-origin: 0 100%;
 	width: 58%;
 	
 	@media(max-width:$tablet){
 		height: 30rem;
+		transform: none;
 		width: 100%;
 	}
 
@@ -128,7 +133,7 @@
 	}*/
 	
 	&:after{
-		background: url(images/footer-angle.png) no-repeat 0 0;
+		/*background: url(images/footer-angle.png) no-repeat 0 0;
 		background-size: auto 100%;
 		content: "";
 		display: block;
@@ -141,6 +146,18 @@
 	
 		@media(max-width:$tablet){
 			display: none;
+		}*/
+	}
+	
+	#gmap{
+		height: 100%;
+		width: 100%;
+		transform: skewX(30deg);
+		transform-origin: 0 100%;
+
+		@media(max-width:$tablet){
+			height: 30rem;
+			transform: none;
 		}
 	}
 }

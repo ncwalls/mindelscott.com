@@ -3,13 +3,6 @@
 <?php while( have_posts() ): the_post(); ?>
 	
 <div class="home-main">
-	<div class="container">
-		<div class="home-intro">
-			<h1><?php the_field('intro_title'); ?></h1>
-			<p><?php the_field('intro_content'); ?></p>
-			<a class="button" href="<?php the_field('intro_link'); ?>"><?php the_field('intro_link_text'); ?></a>
-		</div>
-	</div>
 	<div class="home-hero">
 		<svg version="1.1"
 			 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -47,6 +40,12 @@
 				l19.1,32.7c0.4,0.8,1.3,1.2,2.2,1.2h21.3c1.4,0,2.5-1.1,2.5-2.5c0-0.5-0.2-1-0.5-1.5L102.5,5H118l50.2,86h-58L90.4,57.1
 				L98.2,43.8z M60,5h15.5l9.2,15.7l-7.7,13.2L60,5z M97.6,1.1L97.6,1.1L97.6,1.1L97.6,1.1z"/>
 		</svg>
+	</div>
+	<div class="home-intro">
+		<img src="<?php the_field( 'site_logo', 'option' ); ?>" alt="<?php bloginfo( 'name' ); ?>" class="logo">
+		<h1><?php the_field('intro_title'); ?></h1>
+		<p><?php the_field('intro_content'); ?></p>
+		<a class="button" href="<?php the_field('intro_link'); ?>"><?php the_field('intro_link_text'); ?></a>
 	</div>
 </div>
 
@@ -179,9 +178,9 @@
 						<?php while(have_rows('affiliates')): the_row(); ?>
 							<li>
 								<?php if(get_sub_field('link')):?>
-								<a href="<?php the_sub_field('link'); ?>">
+								<a href="<?php the_sub_field('link'); ?>" target="_blank" title="<?php the_sub_field('title'); ?>">
 								<?php endif; ?>
-								<img src="<?php echo get_sub_field('icon')['sizes']['medium']; ?>" alt="<?php the_sub_field('title'); ?>">
+									<img src="<?php echo get_sub_field('icon')['sizes']['medium']; ?>" alt="<?php the_sub_field('title'); ?>">
 								<?php if(get_sub_field('link')):?>
 								</a>
 								<?php endif; ?>

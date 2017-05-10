@@ -33,8 +33,7 @@
 						</nav>
 					</div>
 					<div class="quote">
-						<p>“Etiam lobortis velit phasellus suscipit urnalate classen aptent tacitin sociosqu 
- torquent selim trebor lehcar mailliw.”</p>
+						<p><?php echo get_field('footer_quote', 'option'); ?></p>
 						<p class="author"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/signature.png" alt="David A. Mindel"/></p>
 					</div>
 					<div class="social">
@@ -44,7 +43,7 @@
 								$social_links = $contact_info['social_media_links'];
 								foreach($social_links as $social):
 							?>
-								<li><a href="<?php echo $social['url']; ?>" class="fa <?php echo $social['class']; ?>"></a></li>
+								<li><a href="<?php echo $social['url']; ?>" target="_blank" class="fa <?php echo $social['class']; ?>"></a></li>
 							<?php endforeach; ?>
 						</ul>
 					</div>
