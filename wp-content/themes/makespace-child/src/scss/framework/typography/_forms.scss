@@ -106,6 +106,9 @@ select[multiple] {
 		right: 0.5rem;
 		top: 50%;
 		z-index: 1;
+		-webkit-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		-o-transform: translateY(-50%);
 		transform: translateY(-50%);
 	}
 }
@@ -119,4 +122,13 @@ select[multiple] {
 	position: absolute;
 	width: 0;
 	z-index: -1;
+}
+
+.validation_error{
+	margin: 1rem 0;
+}
+
+.validation_error,
+.validation_message{
+	color: $form-error-color;
 }

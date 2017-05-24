@@ -149,6 +149,9 @@
 			top: 50%;
 			right: 0;
 			left: 0;
+			-webkit-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			-o-transform: translateY(-50%);
 			transform: translateY(-50%);
 		
 			@media (max-width:$tablet){
@@ -179,6 +182,9 @@
 			top: 50%;
 			right: 0;
 			left: 0;
+			-webkit-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			-o-transform: translateY(-50%);
 			transform: translateY(-50%);
 			transition: opacity 0.5s;
 			z-index: 3;
@@ -188,7 +194,10 @@
 			}
 			@media (max-width:$phablet){
 				top: 0;
-				transform:none;
+				-webkit-transform: none;
+				-ms-transform: none;
+				-o-transform: none;
+				transform: none;
 			}
 			
 			p{

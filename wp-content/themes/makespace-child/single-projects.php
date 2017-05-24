@@ -57,16 +57,19 @@
 						</section>
 					<?php endif; ?>
 					<?php
-						global $wbdp;
+						/*global $wbdp;
 						$thisID = get_the_ID();
 						$project_staff = $wpdb->get_results( "SELECT post_id FROM $wpdb->postmeta WHERE meta_value LIKE '%\"$thisID\"%'");
-						//print_r( $project_staff[0] );
+						
+						//$project_staff = get_field('project_staff');
+						
+						if($project_staff):
+							$project_staff_ID = $project_staff[0]->post_id;
 					
-						$project_staff_ID = $project_staff[0]->post_id;
 					?>
 					<section class="project-staff">
 						<h3>Project manager</h3>
-						<a href="<?php get_permalink(); ?>" title="">
+						<a href="<?php echo get_permalink($project_staff_ID); ?>" title="">
 							<figure>
 								<div class="img" style="background-image: url(<?php echo get_the_post_thumbnail_url($project_staff_ID, 'small'); ?>)"></div>
 							</figure>
@@ -76,6 +79,7 @@
 							</div>
 						</a>
 					</section>
+					<?php endif;*/ ?>
 				</aside>
 				
 				<div class="project-share">

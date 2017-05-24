@@ -6,8 +6,8 @@
 	<div class="home-hero">
 		<svg version="1.1"
 			 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-			 x="0px" y="0px" width="175.1px" height="114.2px" viewBox="0 0 175.1 114.2" style="enable-background:new 0 0 175.1 114.2;"
-			 xml:space="preserve">
+			 x="0px" y="0px" viewBox="0 0 175.1 114.2" style="enable-background:new 0 0 175.1 114.2;"
+			 xml:space="preserve" preserveAspectRatio="none">
 			<?php
 				$fill = '#75b94b';
 				if(get_the_post_thumbnail_url()):
@@ -121,10 +121,15 @@
 									<?php
 										$fill = '#75b94b';
 										if(get_the_post_thumbnail_url($project_id)):
+											$project_img = get_the_post_thumbnail_url( $project_id, 'medium' );
+										elseif(get_field('project_gallery', $project_id)):
+											$project_img = get_field('project_gallery', $project_id)[0]['sizes']['medium'];
+										endif;
+										if( get_the_post_thumbnail_url($project_id) || get_field('project_gallery', $project_id) ):
 											$fill = 'url(#img-' . $project_id . ')'; ?>
 											<defs>
 												<pattern id="img-<?php echo $project_id ?>" patternUnits="userSpaceOnUse" width="175" height="114">
-													<image xlink:href="<?php the_post_thumbnail_url( 'medium' ); ?>" x="0" y="0" width="100%" height="100%" preserveAspectRatio="xMinYMin slice" />
+													<image xlink:href="<?php echo $project_img; ?>" x="0" y="0" width="100%" height="100%" preserveAspectRatio="xMinYMin slice" />
 												</pattern>
 											</defs>
 									<?php endif; ?>

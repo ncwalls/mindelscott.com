@@ -58,10 +58,15 @@
 									<?php
 										$fill = '#75b94b';
 										if(get_the_post_thumbnail_url()):
+											$project_img = get_the_post_thumbnail_url(get_the_ID(), 'medium' );
+										elseif(get_field('project_gallery')):
+											$project_img = get_field('project_gallery')[0]['sizes']['medium'];
+										endif;
+										if(get_the_post_thumbnail_url() || get_field('project_gallery')):
 											$fill = 'url(#img-' . get_the_ID() . ')'; ?>
 											<defs>
 												<pattern id="img-<?php the_ID(); ?>" patternUnits="userSpaceOnUse" width="175" height="114">
-													<image xlink:href="<?php the_post_thumbnail_url( 'medium' ); ?>" x="0" y="0" width="100%" height="100%" preserveAspectRatio="xMinYMin slice" />
+													<image xlink:href="<?php echo $project_img; ?>" x="0" y="0" width="100%" height="100%" preserveAspectRatio="xMinYMin slice" />
 												</pattern>
 											</defs>
 									<?php endif; ?>

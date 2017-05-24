@@ -34,12 +34,18 @@
 	top: 0;
 	width: 280px;
 	z-index: 99998;
+	-webkit-transform: translateX(100%);
+	-ms-transform: translateX(100%);
+	-o-transform: translateX(100%);
 	transform: translateX(100%);
 	transition: transform 400ms;
 	transition-delay: 0ms;
 
 	.nav-open & {
 		box-shadow: 0 0 4px #000;
+		-webkit-transform: translateX(0);
+		-ms-transform: translateX(0);
+		-o-transform: translateX(0);
 		transform: translateX(0);
 		transition-delay: 200ms;
 	}
@@ -88,10 +94,16 @@
 		}
 		&:before {
 			top: 0;
+			-webkit-transform: rotate(-45deg);
+			-ms-transform: rotate(-45deg);
+			-o-transform: rotate(-45deg);
 			transform: rotate(-45deg);
 		}
 		&:after {
 			bottom: 0;
+			-webkit-transform: rotate(45deg);
+			-ms-transform: rotate(45deg);
+			-o-transform: rotate(45deg);
 			transform: rotate(45deg);
 		}
 	}
@@ -133,6 +145,9 @@
 
 			&.menu-item-open {
 				> a:after {
+					-webkit-transform: rotate(-180deg);
+					-ms-transform: rotate(-180deg);
+					-o-transform: rotate(-180deg);
 					transform: rotate(-180deg);
 				}
 				.sub-menu {
@@ -157,6 +172,9 @@
 	}
 	&.nav-open {
 		#nav-toggle {
+			-webkit-transform: translateX(200%);
+			-ms-transform: translateX(200%);
+			-o-transform: translateX(200%);
 			transform: translateX(200%);
 			transition-delay: 0ms;
 		}

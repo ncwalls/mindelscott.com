@@ -15,7 +15,8 @@ if( !function_exists( 'get_google_map_data' ) ){
 						for( $i = 0; $i < count( $address_pieces ); $i++ ){
 							$address_html .= '<span class="address-piece-' . $i . '">' . trim( $address_pieces[ $i ] ) . '</span>';
 						}
-						$address_html .= '<span class="address-piece-link"><a href="http://maps.google.com?q=' . $map_details[ 'lat' ] . ',' . $map_details[ 'lng' ] . '" target="_blank">Get directions</a></span>';
+						//$address_html .= '<span class="address-piece-link"><a href="http://maps.google.com?q=' . $map_details[ 'lat' ] . ',' . $map_details[ 'lng' ] . '" target="_blank">Get directions</a></span>';
+						$address_html .= '<span class="address-piece-link"><a href="' . get_field('directions_link', 'option') . '" target="_blank">Get directions</a></span>';
 						$address_html .= '</span>';
 					}
 					$map[] = array(

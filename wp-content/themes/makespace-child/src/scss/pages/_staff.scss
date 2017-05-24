@@ -28,6 +28,9 @@
 			&:hover{
 				.content{
 					background: rgba($green, 0.8);
+					-webkit-transform: translateX(calc(-100% - 1.2rem));
+					-ms-transform: translateX(calc(-100% - 1.2rem));
+					-o-transform: translateX(calc(-100% - 1.2rem));
 					transform: translateX(calc(-100% - 1.2rem));
 					width: calc(50% - 1.2rem);
 					
@@ -35,6 +38,9 @@
 						//background: rgba($green, 0.8);
 						//transform: translateY(calc(-100% - 1.2rem));
 						background: $green;
+						-webkit-transform: none;
+						-ms-transform: none;
+						-o-transform: none;
 						transform: none;
 						width: 100%;
 					}
@@ -72,6 +78,9 @@
 			height: 100%;
 			position: relative;
 			text-align: center;
+			-webkit-transform: translateX(0%);
+			-ms-transform: translateX(0%);
+			-o-transform: translateX(0%);
 			transform: translateX(0%);
 			transition: all 0.3s;
 			width: 50%;
@@ -90,6 +99,9 @@
 				top: 50%;
 				right: 0;
 				left: 0;
+				-webkit-transform: translateY(-50%);
+				-ms-transform: translateY(-50%);
+				-o-transform: translateY(-50%);
 				transform: translateY(-50%);
 			}
 		}
@@ -112,6 +124,9 @@
 			right: 0;
 			text-align: center;
 			text-transform: uppercase;
+			-webkit-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			-o-transform: translateY(-50%);
 			transform: translateY(-50%);
 			width: 50%;
 			z-index: 2;
@@ -200,13 +215,19 @@
 			top: 50%;
 			right: 0;
 			left: 0;
+			-webkit-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			-o-transform: translateY(-50%);
 			transform: translateY(-50%);
 			
 			@media(max-width:$phablet){
 				padding: 3.2rem 1.6rem;
 				position: relative;
 				top: 0;
-				transform: none;
+				-webkit-transform: none;
+				-ms-transform:none;
+				-o-transform: none;
+				transform:none;
 			}
 		}
 		
