@@ -22,9 +22,9 @@ gulp.task( 'dbchange', function(){
 		.pipe( livereload() );
 } );
 
-gulp.task( 'font-awesome', function(){ 
-	return gulp.src( 'bower_components/font-awesome/fonts/**.*' ) 
-        .pipe( gulp.dest( 'wp-content/themes/makespace-child/fonts' ) ); 
+gulp.task( 'font-awesome', function(){
+	return gulp.src( 'bower_components/font-awesome/fonts/**.*' )
+        .pipe( gulp.dest( 'wp-content/themes/makespace-child/fonts' ) );
 } );
 
 gulp.task( 'lint', function(){

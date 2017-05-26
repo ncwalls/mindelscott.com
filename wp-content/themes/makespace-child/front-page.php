@@ -159,7 +159,7 @@
 							</figure>
 							<div class="content">
 								<h2><?php echo get_the_title($project_id); ?></h2>
-								<?php echo MakespaceChild::get_excerpt_by_id($project_id); ?>
+								<?php //echo MakespaceChild::get_excerpt_by_id($project_id); ?>
 							</div>
 						</a>
 					</li>

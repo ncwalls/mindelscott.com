@@ -46,10 +46,13 @@ class MakespaceChild {
 	}
 	
 	function archive_sort_order($query){
-		if(is_archive() && is_post_type_archive( 'services' )):
-			$query->set( 'order', 'ASC' );
-			$query->set( 'orderby', 'menu_order' );
-		endif;    
+		if(is_archive()){
+			
+			if(is_post_type_archive( 'projects' ) || is_post_type_archive( 'services' ) || is_post_type_archive( 'staff' ) || is_post_type_archive( 'careers' )){
+				$query->set( 'order', 'ASC' );
+				$query->set( 'orderby', 'menu_order' );
+			}
+		}
 	}
 	
 	function archive_posts_per_page($query){

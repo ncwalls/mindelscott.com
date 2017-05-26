@@ -50,9 +50,15 @@ a{
 	}
 }
 
-article{
+article.hentry{
 	a{
 		font-weight: 400;
+	}
+	ul,
+	ol{
+		li{
+			margin: 1rem 0;
+		}
 	}
 }
 

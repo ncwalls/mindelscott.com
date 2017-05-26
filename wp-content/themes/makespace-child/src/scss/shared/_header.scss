@@ -7,7 +7,7 @@
 	right: 0;
 	top: 0;
 	width: 10rem;
-	z-index: 101;
+	z-index: 201;
 	
 	@media(max-width:$phablet){
 		height: 15rem;
@@ -30,10 +30,15 @@
 	left: 1rem;
 	text-align: right;
 	text-transform: uppercase;
+	transition: opacity 1s;
 	//width: 3rem;
 	
 	@media(max-width:$phablet){
 		top: 1rem;
+	}
+	
+	.nav-open &{
+		opacity: 0;
 	}
 }
 
@@ -144,11 +149,18 @@
 	z-index: 1001;
 	
 	.nav-open &{
-		-webkit-transform: translateX(100%);;
-		-ms-transform: translateX(100%);;
-		-o-transform: translateX(100%);;
+		-webkit-transform: translateX(100%);
+		-ms-transform: translateX(100%);
+		-o-transform: translateX(100%);
 		transform: translateX(100%);
 		width: 100%;
+		
+		.edge-angle{
+//			-webkit-transform: skew(-30deg) translateX(100%);
+//			-ms-transform: skew(-30deg) translateX(100%);
+//			-o-transform: skew(-30deg) translateX(100%);
+//			transform: skew(-30deg) translateX(100%);
+		}
 	}
 	
 	@media(max-width:$tablet){
@@ -169,6 +181,29 @@
 		left: 1.5rem;
 		width: 2.3rem;
 		z-index: 10;
+	}
+	
+	.edge-angle{
+		display: none;/*
+		background: $green;
+		border-right: 2.2rem solid $black;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		-webkit-transform: skew(-30deg) translateX(0%);
+		-ms-transform: skew(-30deg) translateX(0%);
+		-o-transform: skew(-30deg) translateX(0%);
+		transform: skew(-30deg) translateX(0%);
+		-webkit-transform-origin: 0 100%;
+		-moz-transform-origin: 0 100%;
+		-ms-transform-origin: 0 100%;
+		-o-transform-origin: 0 100%;
+		transform-origin: 0 100%;
+		transition: all 1s;
+		z-index: 0;*/
 	}
 	
 	.inner{

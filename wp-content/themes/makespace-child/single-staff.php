@@ -57,14 +57,17 @@
 				<footer class="single-nav">
 					<ul>
 						<li class="item prev">
-							<?php /*if( get_previous_post() ):*/ $prev = get_previous_post(); ?>
+						<?php
+								//next_post_link('%link', 'Newer entry &gt;')
+							?>
+							<?php if( get_previous_post() ): $prev = get_previous_post(); ?>
 							<a href="<?php echo get_permalink( $prev->ID ); ?>"><span class="fa fa-angle-left"></span> Previous <span class="extra-words">Staff Member</span></a>
-							<?php //endif; ?>
+							<?php endif; ?>
 						</li>
 						<li class="item next">
-							<?php /*if( get_next_post() ):*/ $next = get_next_post(); ?>
+							<?php if( get_next_post() ): $next = get_next_post(); ?>
 							<a href="<?php echo get_permalink( $next->ID ); ?>">Next <span class="extra-words">Staff Member</span> <span class="fa fa-angle-right"></span></a>
-							<?php //endif; ?>
+							<?php endif; ?>
 						</li>
 						<li class="all">
 							<a href="<?php echo home_url('staff'); ?>">

@@ -15,10 +15,10 @@ get_header(); ?>
 			<div class="contact-info">
 				<?php $contact_info = get_field('contact_information', 'option')[0]; ?>
 				<div class="row phone">
-					<span class="fa fa-mobile"></span><?php echo $contact_info['phone_number']; ?>
+					<span class="fa fa-mobile"></span><a href="tel:<?php echo $contact_info['phone_number']; ?>"><?php echo $contact_info['phone_number']; ?></a>
 				</div>
 				<div class="row fax">
-					<span class="fa fa-fax"></span><?php echo $contact_info['fax_number']; ?>
+					<span class="fa fa-fax"></span><a href="#" class="disablelink"><?php echo $contact_info['fax_number']; ?></a>
 				</div>
 				<div class="row address">
 					<span class="fa fa-map-marker"></span><?php echo $contact_info['address']; ?>

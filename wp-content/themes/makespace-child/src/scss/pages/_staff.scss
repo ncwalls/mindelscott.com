@@ -21,6 +21,11 @@
 			position: relative;
 			width: 100%;
 			
+			
+			@media(max-width:$laptop){
+				height: 30rem;
+			}
+			
 			@media(max-width:$phablet){
 				height: auto;
 			}
@@ -59,8 +64,10 @@
 		
 			@media(max-width:$phablet){
 				float: none;
-				height: 20rem;
+				//height: 20rem;
+				height: 0;
 				padding-right: 0;
+				padding-bottom: 100%;
 				width: 100%;
 			}
 			
@@ -69,6 +76,14 @@
 				background-size: cover;
 				height: 100%;
 				width: 100%;
+			
+				@media(max-width:$phablet){
+					position: absolute;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+				}
 			}
 		}
 		.content{

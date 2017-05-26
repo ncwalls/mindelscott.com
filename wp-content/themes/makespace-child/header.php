@@ -65,6 +65,7 @@
 			</button>
 		</header>
 		<div class="main-nav">
+			<div class="edge-angle"></div>
 			<div class="nav-close nav-toggle"></div>
 			<div class="inner">
 				<a href="<?php echo home_url(); ?>" title="<?php bloginfo( 'name' ); ?>" class="nav-logo">
@@ -87,7 +88,7 @@
 							$social_links = $contact_info['social_media_links'];
 							foreach($social_links as $social):
 						?>
-							<li><a href="<?php echo $social['url']; ?>" class="fa <?php echo $social['class']; ?>"></a></li>
+							<li><a href="<?php echo $social['url']; ?>" target="_blank" class="fa <?php echo $social['class']; ?>"></a></li>
 						<?php endforeach; ?>
 					</ul>
 				</div>

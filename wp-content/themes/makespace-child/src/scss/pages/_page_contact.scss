@@ -71,11 +71,21 @@
 			.fa{
 				font-size: 3rem;
 			}
+			a{
+				color: $black;
+				cursor: default;
+				text-decoration: none;
+			}
 		}
 		
 		.fax{
 			.fa{
 				font-size: 2.2rem;
+			}
+			a{
+				color: $black;
+				cursor: default;
+				text-decoration: none;
 			}
 		}
 
@@ -279,4 +289,10 @@
 			width: 100%;
 		}
 	}
+}
+
+.gform_confirmation_message{
+	color: $green;
+	font-size: 2rem;
+	font-weight: 700;
 }

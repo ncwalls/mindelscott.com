@@ -96,11 +96,18 @@
 			}
 		});
 	}
+	
+	var disablelink = function(){
+		$('.disablelink').on('click', function(e){
+			e.preventDefault();
+		})
+	}
 
 	$(document).ready(function(){
 		homePage();
 		jobsPage();
 		projects();
+		disablelink();
 	});
 
 })(jQuery);

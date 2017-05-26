@@ -7,7 +7,7 @@
 							<a href="<?php echo home_url(); ?>" title="<?php bloginfo( 'name' ); ?>" class="footer-top-logo">
 								<img src="<?php the_field( 'site_logo', 'option' ); ?>" alt="<?php bloginfo( 'name' ); ?>">
 							</a>
-							<p class="phone"><?php echo $contact_info['phone_number']; ?></p>
+							<p class="phone"><a href="tel:<?php echo $contact_info['phone_number']; ?>"><?php echo $contact_info['phone_number']; ?></a></p>
 							<p class="address"><?php echo $contact_info['address']; ?></p>
 							<a href="<?php echo home_url('contact'); ?>" class="contact-link">Contact Us Today</a>
 						</div>
@@ -20,7 +20,7 @@
 			<div class="footer-bottom">
 				<div class="container">
 					<div class="site-info">
-						<a href="" class="footer-bottom-logo">
+						<a href="<?php echo home_url(); ?>" class="footer-bottom-logo">
 							<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo-green.png" alt="<?php bloginfo( 'name' ); ?>">
 						</a>
 						<p class="copyright">&copy;<?php echo date( 'Y' ); ?> <?php bloginfo( 'name' ); ?></p>

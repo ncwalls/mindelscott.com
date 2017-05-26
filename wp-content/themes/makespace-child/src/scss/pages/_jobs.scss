@@ -62,12 +62,12 @@
 				}
 
 				.full-content{
-					max-height: 100rem;
+					max-height: 200rem;
 					opacity: 1;
 					z-index: 3;
 				
 					@media (max-width:$phablet){
-						max-height: 200rem;
+						max-height: 300rem;
 					}
 				}
 			}

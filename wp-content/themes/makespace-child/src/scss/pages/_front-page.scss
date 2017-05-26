@@ -50,6 +50,10 @@
 		.brand{
 			opacity: 1;
 			//top: 2rem;
+			
+			@media(max-width:$laptop){
+				opacity: 0;
+			}
 		}
 	}
 	
@@ -372,7 +376,7 @@
 	
 	.about-links{
 		list-style: none;
-		margin: 5rem 0 0 0;
+		margin: 3rem 0 0 0;
 		padding: 0;
 		
 		li{
@@ -380,7 +384,7 @@
 			width: 25%;
 			
 			@media(max-width:$phablet){
-				margin-bottom: 3rem;
+				margin-bottom: 1rem;
 				width: 50%;
 			}
 		}
