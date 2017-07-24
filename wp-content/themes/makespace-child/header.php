@@ -14,7 +14,7 @@
 		<a href="<?php echo home_url(); ?>" title="<?php bloginfo( 'name' ); ?>" class="brand">
 			<img src="<?php the_field( 'site_logo', 'option' ); ?>" alt="<?php bloginfo( 'name' ); ?>">
 			
-			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="382.2px" height="169.7px" viewBox="0 0 382.2 169.7" xml:space="preserve">
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="382.2px" height="169.7px" viewBox="0 0 382.2 169.7" xml:space="preserve" preserveAspectRatio="xMinYMin meet">
 				 <g class="logo-icon">
 					<path d="M278.6,92.9l0-0.1c0-0.1-0.1-0.3-0.1-0.4l0-0.1l-53.2-91C224.7,0.5,223.9,0,223,0l-21.3,0l-0.1,0c-0.1,0-0.1,0-0.2,0
 						c-0.1,0-0.1,0-0.2,0l-0.1,0c-0.1,0-0.1,0-0.2,0.1l-0.5,0.3c0,0-0.1,0.1-0.2,0.1l-0.2,0.2c0,0-0.1,0.1-0.1,0.2l-8.7,14.8
