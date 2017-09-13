@@ -19,7 +19,7 @@ class MakespaceChild {
 			'site_url' => site_url(),
 			'stylesheet_directory' => get_stylesheet_directory_uri()
 		);
-		$google_api_key = get_field( 'msw_google_map_api_key', 'option' );
+		$google_api_key = 'AIzaSyBmNU-I3KliKrG6efiTSAA2F1gTC-ehS98';
 		wp_enqueue_script( 'googlemaps', 'https://maps.googleapis.com/maps/api/js?key=' . $google_api_key . '&callback=createGoogleMap', array( 'theme' ), null, true );
 		wp_enqueue_script( 'theme', get_stylesheet_directory_uri() . '/scripts.min.js' );
 		wp_localize_script( 'theme', 'MSWObject', $msw_object );
